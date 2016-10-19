@@ -6,7 +6,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Arnale\\AliyunSms\\": "src/"
+            "Arnale\\AliyunSms\\": "src/",
+            "ALiyun\\Core\\": "core/"
         }
     },
 
