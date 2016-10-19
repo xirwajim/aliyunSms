@@ -50,8 +50,7 @@ class ServiceProvider extends LaravelServiceProvider
     public function register()
     {
         $this->app->singleton(['Arnale\\AliyunSms\\AliyunSms' => 'aliyunSms'], function ($app) {
-            $app = new Application(config('arnale'));
-
+            $app = new AliyunSms(config('arnale'));
             return $app;
         });
     }
@@ -64,6 +63,5 @@ class ServiceProvider extends LaravelServiceProvider
     public function provides()
     {
         return ['aliyunSms', 'Arnale\\AliyunSms\\AliyunSms'];
-
     }
 }

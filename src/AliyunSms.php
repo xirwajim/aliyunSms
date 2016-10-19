@@ -32,9 +32,9 @@ class AliyunSms
             error_reporting(E_ALL);
         }
 
-        $this->registerProviders();
-        $this->registerBase();
-        $this->initializeLogger();
+//        $this->registerProviders();
+//        $this->registerBase();
+//        $this->initializeLogger();
 
 
 
@@ -45,6 +45,7 @@ class AliyunSms
     public function send()
     {
         $iClientProfile = DefaultProfile::getProfile("cn-hangzhou", "Gfe1nnYoR3Brq5pR", "ofKVh0lI3rMKC7eVHr5Bma4Lwpx54k");
+//        $iClientProfile::addEndpoint("cn-hangzhou", "cn-hangzhou", "Domain", "domain.aliyuncs.com");
         $client = new DefaultAcsClient($iClientProfile);
         $request = new SingleSendSmsRequest();
         $request->setSignName("阿尔纳乐");/*签名名称*/
